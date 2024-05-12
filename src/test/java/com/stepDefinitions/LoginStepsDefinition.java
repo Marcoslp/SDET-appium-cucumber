@@ -5,19 +5,19 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 public class LoginStepsDefinition {
 
     @Given("the user clicks on the get started button")
     public void theUserClicksOnTheGetStartedButton() {
-        Assertions.assertTrue(new WelcomePage().verifyWelcomePageIsDisplayed());
+        Assert.assertTrue(new WelcomePage().verifyWelcomePageIsDisplayed());
         new WelcomePage().clickGetStartedButton();
     }
 
     @Then("the login page is displayed")
     public void theLoginPageIsDisplayed() {
-        Assertions.assertTrue(new LoginPage().loginPageIsDisplayed());
+        Assert.assertTrue(new LoginPage().loginPageIsDisplayed());
     }
 
     @When("the user enters a prefix number: {string} and a phone number: {string}")
@@ -35,7 +35,7 @@ public class LoginStepsDefinition {
 
     @Then("the user is redirected to the get code page")
     public void theUserIsRedirectedToTheGetCodePage() {
-        Assertions.assertTrue(new VerifySmsCodePage().verifySmsCodePageIsDisplayed());
+        Assert.assertTrue(new VerifySmsCodePage().verifySmsCodePageIsDisplayed());
     }
 
     @When("the user enters the received code: {string}")
@@ -50,7 +50,7 @@ public class LoginStepsDefinition {
 
     @Then("the user is prompted to accept permissions")
     public void theUserIsPromptedToAcceptPermissions() {
-        Assertions.assertTrue(new PermissionsRequestPage().verifyPermissionsPageIsDisplayed());
+        Assert.assertTrue(new PermissionsRequestPage().verifyPermissionsPageIsDisplayed());
     }
 
     @When("the user accepts the permissions")
@@ -63,7 +63,7 @@ public class LoginStepsDefinition {
 
     @Then("the user should be successfully logged in")
     public void theUserShouldBeSuccessfullyLoggedIn() {
-        Assertions.assertTrue(new RidesPage().verifyRidesPageIsDisplayed());
+        Assert.assertTrue(new RidesPage().verifyRidesPageIsDisplayed());
     }
 
     @When("the user enters an invalid code: {string}")
@@ -73,6 +73,6 @@ public class LoginStepsDefinition {
 
     @Then("the user gets an error message")
     public void theUserGetsAnErrorMessage() {
-        Assertions.assertTrue(new VerifySmsCodePage().verifyErrorSnackbarIsPresent());
+        Assert.assertTrue(new VerifySmsCodePage().verifyErrorSnackbarIsPresent());
     }
 }

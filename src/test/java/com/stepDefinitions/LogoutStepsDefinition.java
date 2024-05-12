@@ -5,7 +5,7 @@ import com.pages.RidesPage;
 import com.pages.UserAccountPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 public class LogoutStepsDefinition {
 
@@ -13,12 +13,12 @@ public class LogoutStepsDefinition {
     public void theUserClicksTheLogoutButtonOnTheAccountPage() {
         new RidesPage().clickOpenAccountMenuButton();
         UserAccountPage userAccountPage = new UserAccountPage();
-        Assertions.assertTrue(userAccountPage.verifyAccountPageIsVisible());
+        Assert.assertTrue(userAccountPage.verifyAccountPageIsVisible());
         userAccountPage.clickSignOutButton();
     }
 
     @Then("the user is sign out from the application")
     public void theUserIsSignOutFromTheApplication() {
-        Assertions.assertTrue(new LoginPage().loginPageIsDisplayed());
+        Assert.assertTrue(new LoginPage().loginPageIsDisplayed());
     }
 }

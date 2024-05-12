@@ -7,7 +7,7 @@ import com.pages.UserAccountPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 public class EditProfileStepsDefinition {
 
@@ -15,9 +15,9 @@ public class EditProfileStepsDefinition {
     public void theUserGoesToProfile() {
         new RidesPage().clickOpenAccountMenuButton();
         UserAccountPage userAccountPage = new UserAccountPage();
-        Assertions.assertTrue(userAccountPage.verifyAccountPageIsVisible());
+        Assert.assertTrue(userAccountPage.verifyAccountPageIsVisible());
         userAccountPage.clickGoToProfileButton();
-        Assertions.assertTrue(new ProfilePage().verifyProfilePageIsVisible());
+        Assert.assertTrue(new ProfilePage().verifyProfilePageIsVisible());
     }
 
     @And("edits their first and last name")
@@ -34,8 +34,8 @@ public class EditProfileStepsDefinition {
 
     @Then("the profile is updated")
     public void userProfileIsUpdated() {
-        Assertions.assertTrue(new UserAccountPage().verifyUserFirstAndLastNames(StringsHelper.newFirstName, StringsHelper.newLastName));
-        Assertions.assertTrue(new UserAccountPage().verifySuccessSnackbarMessageIsPresent());
+        Assert.assertTrue(new UserAccountPage().verifyUserFirstAndLastNames(StringsHelper.newFirstName, StringsHelper.newLastName));
+        Assert.assertTrue(new UserAccountPage().verifySuccessSnackbarMessageIsPresent());
     }
 
     @And("leaves empty the first name field")
@@ -52,7 +52,7 @@ public class EditProfileStepsDefinition {
     @Then("an error message is displayed")
     public void anErrorMessageIsDisplayed() {
         ProfilePage profilePage = new ProfilePage();
-        Assertions.assertTrue(profilePage.verifyInvalidFirstNameErrorMessageIsVisible());
-        Assertions.assertTrue(profilePage.verifyInvalidFirstNameIconIsVisible());
+        Assert.assertTrue(profilePage.verifyInvalidFirstNameErrorMessageIsVisible());
+        Assert.assertTrue(profilePage.verifyInvalidFirstNameIconIsVisible());
     }
 }
