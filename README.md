@@ -1,5 +1,5 @@
 # SDET appium-cucumber automation challenge
-This is a Appium-Cucumber automation project and iss currently designed to test Android devices
+This is an Appium-Cucumber automation project and is currently designed to test Android devices
 
 ## Getting Started
 
@@ -21,10 +21,10 @@ git clone https://github.com/Marcoslp/SDET-appium-cucumber.git
 ## How to run the project
 
 1. Open [IntelliJ IDEA]([https://www.npmjs.com/package/appium](https://www.jetbrains.com/idea/)) or any IDE
-2. Run the TestRunner class which is a JUNit runner
+2. Run the TestRunner class, which is a JUNit runner
 
 Notes:
-- You don't need to run the Appium server, the application will do it. The virtual machine **should be** turned on. 
+- You don't need to start the Appium server manually, the application will do it but the virtual machine **should be** turned on. 
 - You may need to change the **deviceName**/**platformVersion** of `/main/src/main/resources/config.properties` file to match with the specific VDM.
 
 ## What was implemented
@@ -35,7 +35,7 @@ The project implements three features of the James app:
 
 ## Reports
 
-[Cluecumber](https://github.com/trivago/cluecumber) was used to generate reports
+[Cluecumber](https://github.com/trivago/cluecumber) was used for genereting reports
 
 ### Guide to generate reports
 1. Run the TestRunner class
