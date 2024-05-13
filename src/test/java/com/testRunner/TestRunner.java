@@ -13,7 +13,7 @@ import java.io.IOException;
 @CucumberOptions(snippets = CucumberOptions.SnippetType.CAMELCASE,
         features = "src/test/java/com/resources",
         glue = "com.stepDefinitions",
-        plugin = "pretty")
+        plugin = {"json:target/cucumber-report/cucumber.json"})
 
 public class TestRunner {
 
