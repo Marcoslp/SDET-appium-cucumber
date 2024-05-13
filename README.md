@@ -32,3 +32,15 @@ The project implements three features of the James app:
 - Login process
 - Edit user profile process
 - Logout process
+
+## Reports
+
+[Cluecumber](https://github.com/trivago/cluecumber) was used to generate reports
+
+### Guide to generate reports
+1. Run the TestRunner class
+2. Go to the terminal and type: `mvn cluecumber-report:reporting`
+3. Go to target folder > generated-report and open **index.html file**
+![image](https://github.com/Marcoslp/SDET-appium-cucumber/assets/14029770/91e4e659-34a9-451e-bd54-d034dc92ad35)
+4. Once the **index.html** file is opened, a report like this one will be displayed:
+![image](https://github.com/Marcoslp/SDET-appium-cucumber/assets/14029770/ca9d7c76-1feb-499b-a821-fb50c852abbb)
